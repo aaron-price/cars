@@ -68,12 +68,15 @@ def calculate(cars, title):
 		cond = car['condition']
 		val = car['val_offset']
 		return val / cond
+	def get_title(car):
+		return str(car['year']) + " " + str(car['make']) + " " + str(car['model'])
 
 
 	for i, car in enumerate(cars):
 		add_field(i, 'condition', get_condition(car))
 		add_field(i, 'val_offset', value_offset(car))
 		add_field(i, 'cond_val', cond_value(car))
+		add_field(i, 'title', get_title(car))
 	averages['avg_over_fmv'] = mean(all_over_fmv)
 	averages['title'] = title
 

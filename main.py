@@ -9,14 +9,18 @@ atr = calculate(atr_data, 'atr')
 all_data = [cl['all'],hy['all'],atr['all']]
 avg_data = [cl['avg'],hy['avg'],atr['avg']]
 
-def compete(field, rev = False):
+def compete(data, field, rev = False):
 	print("FIELD",field)
-	newlist = sorted(avg_data, key=lambda k: k[field], reverse=rev) 
+	newlist = sorted(data, key=lambda k: k[field], reverse=rev) 
 	for l in newlist:
 		print("| ",l['title'],l[field])
 	print(" ")
 
+# Available average data
 print(avg_data[0].keys())
 
-compete('avg_over_fmv')
-compete('avg_year')
+# avg_over_fmv = "Price" - "fair market value" (according to motortrends.com)
+compete(avg_data, 'avg_over_fmv')
+
+compete(all_data[0], 'price')
+compete(all_data[0], 'over_fmv')
