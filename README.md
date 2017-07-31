@@ -2,7 +2,7 @@
 
 I need to buy a car, so I started collecting data and playing with numbers.
 
-It takes data from the first page on craigslist and autotrader.ca
+It takes data I collected from a hyundai dealer down the road, plus the first page on craigslist and autotrader.ca
 both are filtered to only include cars under $12k, under 200km, and 2008 or newer.
 
 Then, it compares their price to the fair market value, according to motortrends.com, and determines the best deal based on a variety of metrics.
